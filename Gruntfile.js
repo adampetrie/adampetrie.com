@@ -31,14 +31,6 @@ module.exports = function (grunt) {
     grunt.initConfig({
         yeoman: yeomanConfig,
         watch: {
-            //coffee: {
-            //    files: ['<%= yeoman.app %>/scripts/{,*/}*.coffee'],
-            //    tasks: ['coffee:dist']
-            //},
-            //coffeeTest: {
-            //    files: ['test/spec/{,*/}*.coffee'],
-            //    tasks: ['coffee:test']
-            //},
             compass: {
                 files: ['<%= yeoman.app %>/common/styles/{,*/}*.{scss,sass}'],
                 tasks: ['compass']
@@ -72,16 +64,6 @@ module.exports = function (grunt) {
                     }
                 }
             },
-            //test: {
-            //    options: {
-            //        middleware: function (connect) {
-            //            return [
-            //                mountFolder(connect, '.tmp'),
-            //                mountFolder(connect, 'test')
-            //            ];
-            //        }
-            //    }
-            //},
             dist: {
                 options: {
                     middleware: function (connect) {
@@ -112,35 +94,6 @@ module.exports = function (grunt) {
                 'test/spec/{,*/}*.js'
             ]
         },
-        //mocha: {
-        //    all: {
-        //        options: {
-        //            run: true,
-        //            urls: ['http://localhost:<%= connect.options.port %>/index.html']
-        //        }
-        //    }
-        //},
-        //coffee: {
-        //    dist: {
-        //        files: [{
-        //            // rather than compiling multiple files here you should
-        //            // require them into your main .coffee file
-        //            expand: true,
-        //            cwd: '<%= yeoman.app %>/scripts',
-        //            src: '*.coffee',
-        //            dest: '.tmp/scripts',
-        //            ext: '.js'
-        //        }]
-        //    },
-        //    test: {
-        //        files: [{
-        //            expand: true,
-        //            cwd: '.tmp/spec',
-        //            src: '*.coffee',
-        //            dest: 'test/spec'
-        //        }]
-        //    }
-        //},
         compass: {
             options: {
                 sassDir: '<%= yeoman.app %>/common/styles',
@@ -158,29 +111,28 @@ module.exports = function (grunt) {
                 }
             }
         },
-        // not used since Uglify task does concat,
-        // but still available if needed
-        /*concat: {
-            dist: {}
-        },*/
-
         uglify: {
             dist: {
                 files: {
                     '<%= yeoman.dist %>/common/scripts/main.js': [
-                        '<%= yeoman.app %>/common/scripts/{,*/}*.js'
+                        '<%= yeoman.app %>/common/scripts/main.js'
+                    ],
+                    '<%= yeoman.dist %>/common/scripts/vendor.js': [
+                        '<%= yeoman.app %>/components/jquery/jquery.js',
+                        '<%= yeoman.app %>/components/modernizr/modernizr.js',
+                        '<%= yeoman.app %>/common/scripts/form.js'
                     ],
                 }
             }
         },
         useminPrepare: {
-            html: '<%= yeoman.app %>/application/views/*',
+            html: '<%= yeoman.app %>/application/views/**/*',
             options: {
                 dest: '<%= yeoman.dist %>'
             }
         },
         usemin: {
-            html: ['<%= yeoman.dist %>/application/views/*.php'],
+            html: ['<%= yeoman.dist %>/application/views/**/*.php'],
             css: ['<%= yeoman.dist %>/common/styles/{,*/}*.css'],
             options: {
                 dirs: ['<%= yeoman.dist %>']
@@ -240,7 +192,7 @@ module.exports = function (grunt) {
                         'index.php',
                         'application/**/*',
                         'system/**/*',
-                        'components/sass-bootstrap/fonts'
+                        'components/sass-bootstrap/fonts/*'
                     ]
                 }]
             }
@@ -258,10 +210,9 @@ module.exports = function (grunt) {
         if (target === 'dist') {
             return grunt.task.run(['build', 'open', 'connect:dist:keepalive']);
         }
-
+        
         grunt.task.run([
             'clean:server',
-            //'coffee:dist',
             'compass:server',
             'livereload-start',
             'connect:livereload',
@@ -270,22 +221,12 @@ module.exports = function (grunt) {
         ]);
     });
 
-    //grunt.registerTask('test', [
-    //    'clean:server',
-    //    'coffee',
-    //    'compass',
-    //    'connect:test',
-    //    'mocha'
-    //]);
-
     grunt.registerTask('build', [
         'clean:dist',
-        //'coffee',
         'compass:dist',
         'useminPrepare',
         'imagemin',
         'htmlmin',
-        'concat',
         'cssmin',
         'uglify',
         'copy',
@@ -294,7 +235,6 @@ module.exports = function (grunt) {
 
     grunt.registerTask('default', [
         'jshint',
-        //'test',
         'build'
     ]);
 };

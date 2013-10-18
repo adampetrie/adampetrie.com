@@ -31,9 +31,8 @@ a {
     max-width: 960px;
     
     #gears {
-        position: absolute;
-        margin-left: 265px;
-        top: 220px;
+        display: none;
+        top: 160px;
         
         div {
             position:absolute;
@@ -217,7 +216,9 @@ a {
     #wrapper
     {
         #gears {
+            display: block;
             margin-left: 625px;
+            position: fixed;
         }
         
         #sidebar {

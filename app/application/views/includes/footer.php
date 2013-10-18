@@ -1,44 +1,30 @@
-		<!-- content -->
+			<!-- end:content -->
+			</div>
+		<!-- end:wrapper -->	
 		</div>
+        
+        <!-- build:js(./app) common/scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="components/jquery/jquery.js"></script>
+        <script src="components/modernizr/modernizr.js"></script>
+        <script src="common/scripts/form.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+        
+        <!-- build:js(./app) common/scripts/main.js -->
+        <script src="common/scripts/main.js"></script>
+        <!-- endbuild -->
+        
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-17593025-1');ga('send','pageview');
+        </script>
 		
-		<div id="footer" class="clearfix">
-		
-			<?php if( ! isset($error)) : ?>
-		
-				<p id="back-to-top"><span></span>Back to Top</p>
-				
-			<?php endif; ?>
-		
-			<p id="copy">&copy; <?= date('Y') ?> adampetrie.com. All rights reserved.</p>
-			
-		<!-- footer -->
-		</div>
-
-	<!-- conter-column -->
-	</div>
-
-	<div id="right-side-outer">
-		<div id="right-side"></div>
-	</div>
-	
-	<script type="text/javascript" src="<?= base_url('common/scripts/jquery-1.7.2.min.js') ?>"></script>
-	<script type="text/javascript" src="<?= base_url('common/scripts/form.js') ?>"></script>
-	<script type="text/javascript" src="<?= base_url('common/scripts/ui.js') ?>"></script>
-	
-	<script type="text/javascript">
-
-		var _gaq = _gaq || [];
-		_gaq.push(['_setAccount', 'UA-17593025-1']);
-		_gaq.push(['_trackPageview']);
-		
-		(function() {
-			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		})();
-	
-	</script>
-
 <!-- My American dream is to have it a little bit better than my parents ever had it -->
 </body>
 </html>
