@@ -87,6 +87,12 @@ a {
             margin: 0 10px;
             text-transform: uppercase;
             
+            a {
+                background-color: transparent;
+                color: #63686C;
+                padding: 0;
+            }
+            
             span {
                 color: #555555;
                 display: none;
@@ -94,12 +100,15 @@ a {
             }
             
             &.active {
-                color: $headline-blue;
+                
+                a {
+                    color: $headline-blue;   
+                }
                 
                 span {
                     display: inline;
                 }
-            }
+            }   
         }
     }
     

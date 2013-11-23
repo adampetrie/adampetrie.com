@@ -8,6 +8,7 @@
         <script src="components/jquery/jquery.js"></script>
         <script src="components/modernizr/modernizr.js"></script>
         <script src="common/scripts/form.js"></script>
+		<script src="components/sass-bootstrap/js/scrollspy.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
         

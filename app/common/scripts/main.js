@@ -58,23 +58,32 @@ $('document').ready(function()
 		$('html, body').animate({scrollTop:0}, 'slow');
 	});
 	
+	/** Gear rotation **/
 	if ($('html').hasClass('csstransforms') && Modernizr.mq('(min-width: 700px)')) {
+		
 		var $gear1 = $('#gear1');
 		var $gear2 = $('#gear2');
 		var $gear3 = $('#gear3');
 		var $window = $(window);
 		
-		$(window).scroll(function (e)
+		if (Modernizr.touch) {
+			//$window.on('touchmove', rotateGears);
+		}
+		else
 		{
-			var degrees = Math.floor($window.scrollTop() / 15);
-			
-			var rotationGear1 = degrees;
-			var rotationGear2 = -1 * (1.5 * degrees);
-			var rotationGear3 = -1 * (3 * degrees);
-			
-			$gear1.css({ 'transform': 'rotate(' + rotationGear1 + 'deg)'});
-			$gear2.css({ 'transform': 'rotate(' + rotationGear2 + 'deg)'});
-			$gear3.css({ 'transform': 'rotate(' + rotationGear3 + 'deg)'});
-		});	
+			$window.on('scroll', rotateGears);
+		}
+	}
+	
+	function rotateGears (e) {
+		var degrees = Math.floor($window.scrollTop() / 15);
+		
+		var rotationGear1 = degrees;
+		var rotationGear2 = -1 * (1.5 * degrees);
+		var rotationGear3 = -1 * (3 * degrees);
+		
+		$gear1.css({ 'transform': 'rotate(' + rotationGear1 + 'deg)'});
+		$gear2.css({ 'transform': 'rotate(' + rotationGear2 + 'deg)'});
+		$gear3.css({ 'transform': 'rotate(' + rotationGear3 + 'deg)'});	
 	}
 });
