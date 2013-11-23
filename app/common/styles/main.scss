@@ -40,15 +40,12 @@ a {
         
         #gear1 {
             background: url('/common/images/gear1.png') no-repeat;
-            
             width: 306px;
             height: 304px;
-            
         }
         
         #gear2 {
             background: url('/common/images/gear2.png') no-repeat;
-            
             width: 210px;
             height: 206px;
             right: -10px;
@@ -65,10 +62,15 @@ a {
     }
     
     #sidebar {
+        background-color: black;
+        position: fixed;
+        width: 100%;
+        z-index: 2;
+        
         p {
             font-family: 'Alegreya SC', serif;
             color: #ff972d;
-            font-size: 32px;
+            font-size: 2em;
             text-align: center;
         }
         
@@ -82,7 +84,7 @@ a {
         
         li {
             cursor: pointer;
-            font-size: 18px;
+            font-size: 1.125em;
             float: left;
             margin: 0 10px;
             text-transform: uppercase;
@@ -96,7 +98,7 @@ a {
             span {
                 color: #555555;
                 display: none;
-                font-size: 12px;
+                font-size: 0.750em;
             }
             
             &.active {
@@ -113,17 +115,17 @@ a {
     }
     
     #content {
-        /*background-image: url('/common/images/gears.png');*/
-        background-position: right 150px;
+        background-image: url('/common/images/static_gears.png');
+        background-position: center 150px;
         background-repeat: no-repeat;
         max-width: 700px;
         padding: 200px 10px 0 10px;
         position: relative;
-        z-index: 10;
+        z-index: 1;
         
         h1 {
             color: #FFFFFF;
-            font-size: 48px;
+            font-size: 3em;
         }
         
         p.lead {
@@ -135,7 +137,7 @@ a {
             
             span {
                 color: #555555;
-                font-size: 20px;
+                font-size: 1.250em;
             }
         }
         
@@ -163,6 +165,10 @@ a {
             div.thumb {
                 text-align: center;
                 margin-bottom: 10px;
+                
+                img {
+                    width: 100%;
+                }
             }
             
             h3 {
@@ -172,14 +178,14 @@ a {
         
         blockquote {
             border: none;
-            margin: 45px 0;
-            padding-left: 75px;
+            margin: 8% 0;
+            padding-left: 25%;
             position: relative;
             
             span {
                 color: #ff972d;
                 font-family: 'Alegreya SC', serif;
-                font-size: 200px;
+                font-size: 12.500em;
                 left: -5px;
                 line-height: 90px;
                 position: absolute;
@@ -188,7 +194,7 @@ a {
         
         label.error {
             color: #B90000;
-            font-size: 12px;
+            font-size: 0.750em;
         }
         
         #thank-you {
@@ -197,7 +203,7 @@ a {
             span {
                 color: $headline-blue;
                 font-family: 'Alegreya SC', serif;
-                font-size: 48px;
+                font-size: 3em;
             }
         }
         
@@ -212,6 +218,33 @@ a {
             #back-to-top {
                 cursor: pointer;
             }
+        }
+    }
+}
+
+@media screen and (orientation:landscape) {
+    body {
+        font-size: 8px;
+    }
+    
+    #wrapper #content {
+        
+        blockquote {
+            padding-left: 18%;    
+        }
+    }
+}
+
+@media screen and (min-width: 500px) {
+    
+    #wrapper #content {
+    
+        blockquote {
+            padding-left: 15%;
+        }
+        
+        div.project div.thumb img {
+            width: auto;
         }
     }
 }
@@ -232,7 +265,6 @@ a {
         
         #sidebar {
             float: left;
-            position: fixed;
             width: 200px;
             
             p {
@@ -252,6 +284,7 @@ a {
         }
         
         #content {
+            background-image: none;
             margin-left: 230px;
             margin-right: 30px;
             padding: 200px 0 0 0;
