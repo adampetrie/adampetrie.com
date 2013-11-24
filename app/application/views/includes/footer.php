@@ -4,14 +4,15 @@
 		</div>
         
         <!-- build:js(./app) common/scripts/vendor.js -->
-        <!-- bower:js -->
         <script src="components/jquery/jquery.js"></script>
         <script src="components/modernizr/modernizr.js"></script>
-        <script src="common/scripts/form.js"></script>
-		<script src="components/sass-bootstrap/js/scrollspy.js"></script>
-        <!-- endbower -->
         <!-- endbuild -->
-        
+		
+		<!-- build:js(./app) common/scripts/plugins.js -->
+		<script src="common/scripts/form.js"></script>
+		<script src="components/sass-bootstrap/js/scrollspy.js"></script>
+        <!-- endbuild -->
+		
         <!-- build:js(./app) common/scripts/main.js -->
         <script src="common/scripts/main.js"></script>
         <!-- endbuild -->

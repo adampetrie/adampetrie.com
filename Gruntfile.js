@@ -120,6 +120,9 @@ module.exports = function (grunt) {
                     '<%= yeoman.dist %>/common/scripts/vendor.js': [
                         '<%= yeoman.app %>/components/jquery/jquery.js',
                         '<%= yeoman.app %>/components/modernizr/modernizr.js',
+                    ],
+                    '<%= yeoman.dist %>/common/scripts/plugins.js': [
+                        '<%= yeoman.app %>/components/sass-bootstrap/js/scrollspy.js',
                         '<%= yeoman.app %>/common/scripts/form.js'
                     ],
                 }
