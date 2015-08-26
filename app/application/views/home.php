@@ -26,15 +26,15 @@
         <div class="col-xs-6">
             
             <ul>
-                <li>Javascript</li>
-                <li>jQuery Javascript Library</li>
-                <li>Node-webkit Project</li>
-                <li>Backbone.js</li>
-                <li>Underscore.js</li>
+                <li>Ruby on Rails</li>
+                <li>Ember.js</li>
+                <li>Python</li>
                 <li>PHP</li>
                 <li>Codeigniter PHP Framework</li>
                 <li>WordPress Development</li>
                 <li>REST web services</li>
+                <li>Javascript</li>
+                <li>jQuery Javascript Library</li>
             </ul>
         
         </div>
@@ -42,15 +42,15 @@
         <div class="col-xs-6">
             
             <ul>
+                <li>Backbone.js</li>
+                <li>Underscore.js</li>
                 <li>Standards-based HTML5, CSS3</li>
-                <li>LAMP Stack</li>
                 <li>Agile Development</li>
                 <li>Test Driven Development</li>
                 <li>On-site SEO Optimiziation</li>
                 <li>GIT versioning platform</li>
                 <li>SVN versioning platform</li>
                 <li>Adobe Photoshop</li>
-                <li>Adobe Flash</li>
             </ul>
         
         </div>
@@ -66,8 +66,8 @@
     <h2 id="projects"><span class="glyphicon glyphicon-cog"></span> Projects</h2>
     
     <p>
-        For the past 10 months I have been gainfully employed at <a href="https://beta.apptui.com/">Apptui Inc.</a>
-        where I am a senior front-end developer. The samples below represent recent side projects that I am able to claim responsibility for.
+        For the past 2 years I have been gainfully employed at <a href="https://www.freshbooks.com/">FreshBooks</a>
+        where I am a full stack developer. The samples below represent recent side projects that I am able to claim responsibility for.
         In addition to the work below you can browse my repos on <a href="https://github.com/adampetrie">GitHub</a>, see my activity on
         <a href="http://stackoverflow.com/users/623727/adampetrie">StackOverflow</a>, and browse my work history on <a href="https://www.linkedin.com/in/acpetrie">LinkedIn</a>.
     </p>
@@ -94,6 +94,7 @@
         
     </div>
     
+    <!-- 
     <div class="project row">
         
         <div class="thumb col-md-6">
@@ -112,7 +113,7 @@
         </div>
         
     </div>
-    
+     -->
     <blockquote class="clearfix">
         <span>&#147;</span>
         Adam is a great seasoned professional and a fantastic manager with the outstanding record of client projects delivered on time and on budget, meeting and often exceeding all expectations.
