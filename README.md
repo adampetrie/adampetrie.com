@@ -1,30 +1,5 @@
-Agency Jekyll theme
-====================
+Dear Future Adam:
 
-Agency theme based on [Agency bootstrap theme ](https://startbootstrap.com/template-overviews/agency/)
+When you read this in 2 years time and cannot recall how to deploy your site, rest assured that Adam from 2019 had your back. Rest even more assured that Adam from 2017 had _his_ back. 2017 Adam had the brilliant idea to set up this site using Jekyll and Github Pages. Just make sure you have Jekyll installed on your laptop and push any changes you want to make to master. They show up on the site moments later.
 
-# How to use
-
-###Portfolio 
-
-Portfolio projects are in '/_posts'
-
-Images are in '/img/portfolio'
-
-###About
-
-Images are in '/img/about/'
-
-###Team
-
-Team members and info are in '_config.yml'
-
-Images are in '/img/team/'
-
-
-# Demo
-
-View this jekyll theme in action [here](https://y7kim.github.io/agency-jekyll-theme)
-
-=========
-For more details, read [documentation](http://jekyllrb.com/)
+Fare thee well future Adam and never forget - be excellent to one another.
